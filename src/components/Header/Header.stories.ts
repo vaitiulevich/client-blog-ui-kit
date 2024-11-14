@@ -2,6 +2,12 @@ import { Header } from '@components/Header/Header';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
+const locales = [
+  { code: 'en', label: 'EN' },
+  { code: 'fr', label: 'FR' },
+  { code: 'ru', label: 'RU' },
+];
+
 const meta = {
   title: 'UI/Header',
   component: Header,
@@ -36,6 +42,8 @@ export const WithButton: Story = {
     navItems: navItems,
     buttonOnClick: fn(),
     buttonLabel: 'Video about us',
+    onLocaleChange: fn(),
+    locales: locales,
   },
   parameters: {
     viewport: { defaultViewport: 'reset' },
